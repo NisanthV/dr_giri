@@ -1,0 +1,120 @@
+.home {
+  position: relative;
+  /* Other styles for your Home component */
+}
+
+/* Overlay styles to cover the full viewport */
+.overlay {
+  position: fixed; /* Fixed positioning to overlay entire viewport */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Optional semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* High z-index to ensure it's in front */
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: repeat(4, minmax(500px auto));
+  gap: 10px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+}
+
+.box1 {
+  background-color: #f9d953;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  border-radius: 10px;
+  padding: 20px;
+}
+.box2 {
+  background-color: #f2806f;
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  border-radius: 10px;
+  padding: 20px;
+}
+.box3 {
+  background-color: #72c163;
+  grid-column: 1 / span 2;
+  grid-row: 3;
+  border-radius: 10px;
+  padding: 20px;
+}
+.box4 {
+  background-color: #79c0e6;
+  grid-column: 1 / span 2;
+  grid-row: 4;
+  border-radius: 10px;
+  padding: 20px;
+}
+.box5 {
+  background-color: #a6961c;
+  grid-column: 3;
+  grid-row: 3;
+  border-radius: 10px;
+  padding: 20px;
+}
+.box6 {
+  background-color: #998282;
+  grid-column: 3;
+  grid-row: 4;
+  border-radius: 10px;
+  padding: 20px;
+}
+.box7 {
+  background-color: #ff0000;
+  grid-column: 1 / span 3;
+  grid-row: auto;
+  height: 200px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.box8 {
+  background-color: #ff0000;
+  grid-column: 1 / span 3;
+  grid-row: auto;
+  height: 200px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.box9 {
+  background-color: #ff0000;
+  grid-column: 1 / span 3;
+  grid-row: auto;
+  height: 200px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.box10 {
+  background-color: #ff0000;
+  grid-column: 1 / span 3;
+  grid-row: auto;
+  height: 200px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.video {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+@media (max-width:426px){
+  .body{
+    display: flex;
+    flex-direction: column;
+  }
+  .box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10{
+    flex-wrap: wrap;
+  } 
+}

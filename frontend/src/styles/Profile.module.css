@@ -1,0 +1,119 @@
+/* .profileContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .profileTitle {
+    text-align: center;
+    color: #333;
+  }
+  
+  .profileSection {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .list {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  .listItem {
+    margin-bottom: 5px;
+  }
+  
+  .loading {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 18px;
+    color: #777;
+  }
+   */
+
+   .profileContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .profileTitle {
+    text-align: center;
+    color: #333;
+  }
+  
+  .profileSection {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .listItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .input {
+    flex: 1;
+    margin-right: 10px;
+    padding: 5px;
+  }
+  
+  .textarea {
+    flex: 1;
+    margin-right: 10px;
+    padding: 5px;
+    resize: vertical;
+    min-height: 60px;
+  }
+  
+  .iconButton {
+    background: none;
+    border: none;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .iconButton:hover {
+    color: #000;
+  }
+  
+  .addButton {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .addButton:hover {
+    background-color: #0056b3;
+  }
+  
+  .loading {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 18px;
+    color: #777;
+  }
+  

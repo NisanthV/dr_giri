@@ -1,0 +1,48 @@
+.year{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2em;
+  gap: 1em;
+}
+
+.button{
+  padding: .4em 1em;
+  border: 1px dashed;
+  border-radius: 5px;
+  &:hover{
+    padding: .4em 1em;
+    background-color: rgb(206, 227, 11);
+    border: 2px solid rgb(13, 13, 13);
+    color: rgb(11, 11, 11);
+    border-radius: 5px;
+  }
+}
+
+.active{
+  padding: .4em 1em;
+  background-color: rgb(206, 227, 11);
+  border: 2px solid rgb(13, 13, 13);
+  color: rgb(11, 11, 11);
+  border-radius: 5px;
+
+  &:hover{
+    color: rgb(188, 17, 17);
+    padding: .4em 1em;
+    border-radius: 5px;
+  }
+}
+
+.bookContainer{
+  display:flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.book{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
