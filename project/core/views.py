@@ -35,8 +35,6 @@ class LoginView(APIView):
         if not user_data:
             return Response(status=status.HTTP_401_UNAUTHORIZED)
 
-        user_data = User.objects.get(email=email)
-
         payload = {
             'id': user_data.id,
             'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes=60),
