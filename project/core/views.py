@@ -11,11 +11,12 @@ import jwt, datetime
 class RegistrationView(APIView):
 
     def post(self, request):
+        print(request.data)
         serializer = UserSerializer(data=request.data)
         if (serializer.is_valid(raise_exception=True)):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
+        return Response( status=status.HTTP_400_BAD_REQUEST)
 
 
 class LoginView(APIView):
@@ -45,20 +46,25 @@ class UserView(APIView):
 
     def get(self,request):
 
-        token = request.COOKIES.get("jwt")
-
-        if not token:
-            raise AuthenticationFailed("UNAUTHORIZED")
-
-        try:
-            payload = jwt.decode(token, "secure", algorithms=['HS256'])
-        except jwt.PyJWTError as e:
-            raise AuthenticationFailed(f"UNAUTHORIZED {e}")
-
-        user = User.objects.get(id=payload.get('id'))
-        serializer = UserSerializer(user)
-
-        return Response(serializer.data)
+        print(request.user)
+        if request.user:
+            serializer = UserSerializer(instance=request.user)
+            return Response(serializer.data)
+        return Response("invalid token")
+        # token = request.COOKIES.get("jwt")
+        #
+        # if not token:
+        #     raise AuthenticationFailed("UNAUTHORIZED")
+        #
+        # try:
+        #     payload = jwt.decode(token, "secure", algorithms=['HS256'])
+        # except jwt.PyJWTError as e:
+        #     raise AuthenticationFailed(f"UNAUTHORIZED {e}")
+        #
+        # user = User.objects.get(id=payload.get('id'))
+        # serializer = UserSerializer(user)
+        #
+        # return Response(serializer.data)
 
 class LogOutView(APIView):
     def post(self, request):
