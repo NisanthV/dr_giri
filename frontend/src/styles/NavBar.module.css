@@ -1,0 +1,142 @@
+.list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1em;
+  background-color: #0c0c0c;
+  border-bottom: 1px solid #ccc;
+}
+
+.list li {
+  position: relative;
+  margin: 0 15px;
+  padding: 10px 0;
+}
+
+.img{
+  width: 20px;
+  cursor: pointer;
+
+}
+
+.list li a {
+  text-decoration: none;
+  color: rgb(246, 244, 244);
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+}
+
+/* Underline effect */
+.list li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background-color: blue;
+  transition: width 0.3s ease-out;
+}
+
+.list li a:hover::after {
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+/* Base styles */
+.container {
+  position: relative;
+  background-color: #0c0c0c;
+  padding: 1rem;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  margin: 0 15px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #f6f4f4;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #4a90e2;
+}
+
+.profileIcon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.menuIcon {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  .menuIcon {
+    display: block;
+  }
+
+  .navList {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #0c0c0c;
+    padding: 1rem 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .navList.active {
+    transform: translateX(0);
+  }
+
+  .navItem {
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .navLink {
+    font-size: 1.2rem;
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .profileIcon {
+    width: 40px;
+    height: 40px;
+    margin-top: 1rem;
+  }
+}
