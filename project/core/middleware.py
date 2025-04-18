@@ -12,6 +12,7 @@ class TokenCheckMiddleware:
     def __call__(self, request):
 
         result = self.checkJWT(request)
+
         if isinstance(result, JsonResponse):
             return result
 
