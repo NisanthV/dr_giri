@@ -1,15 +1,16 @@
-from django.contrib.auth.models import AnonymousUser
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import status
-from .serializer import UserSerializer
-from rest_framework.exceptions import AuthenticationFailed
-from .models import User
-from django.contrib.auth import authenticate
 from django.views.decorators.csrf import ensure_csrf_cookie
+from rest_framework.exceptions import AuthenticationFailed
+from django.contrib.auth.models import AnonymousUser
+from rest_framework.response import Response
+from django.contrib.auth import authenticate
+from rest_framework.views import APIView
+from .serializer import UserSerializer
 from django.http import JsonResponse
-import jwt, datetime
+from rest_framework import status
 from .serializer import *
+from .models import *
+import jwt, datetime
+
 
 @ensure_csrf_cookie
 def get_csrf_token(reqest):
